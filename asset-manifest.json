@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portafolio-react/static/css/main.503e54df.chunk.css",
+    "main.js": "/portafolio-react/static/js/main.0afa97cf.chunk.js",
+    "main.js.map": "/portafolio-react/static/js/main.0afa97cf.chunk.js.map",
+    "runtime-main.js": "/portafolio-react/static/js/runtime-main.206e7c81.js",
+    "runtime-main.js.map": "/portafolio-react/static/js/runtime-main.206e7c81.js.map",
+    "static/js/2.9b1a9880.chunk.js": "/portafolio-react/static/js/2.9b1a9880.chunk.js",
+    "static/js/2.9b1a9880.chunk.js.map": "/portafolio-react/static/js/2.9b1a9880.chunk.js.map",
+    "static/js/3.d58817b0.chunk.js": "/portafolio-react/static/js/3.d58817b0.chunk.js",
+    "static/js/3.d58817b0.chunk.js.map": "/portafolio-react/static/js/3.d58817b0.chunk.js.map",
+    "index.html": "/portafolio-react/index.html",
+    "static/css/main.503e54df.chunk.css.map": "/portafolio-react/static/css/main.503e54df.chunk.css.map",
+    "static/js/2.9b1a9880.chunk.js.LICENSE.txt": "/portafolio-react/static/js/2.9b1a9880.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/portafolio-react/static/media/tic-tac-toe.937034d2.svg",
+    "static/media/photo.9410baed.jpg": "/portafolio-react/static/media/photo.9410baed.jpg",
+    "static/media/square.d2d9bbac.svg": "/portafolio-react/static/media/square.d2d9bbac.svg",
+    "static/media/triangle.0ce72f03.svg": "/portafolio-react/static/media/triangle.0ce72f03.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.206e7c81.js",
+    "static/js/2.9b1a9880.chunk.js",
+    "static/css/main.503e54df.chunk.css",
+    "static/js/main.0afa97cf.chunk.js"
+  ]
+}
