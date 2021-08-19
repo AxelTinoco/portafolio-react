@@ -6,6 +6,7 @@
 
 :root {
   --primary-color:#6dcdb8;
+  --second-color: rgb(185, 185, 185);
 }
 .word-break{
   word-break: break-all;
@@ -21,7 +22,7 @@
 }
 
 .text-gray{
-  color: rgb(185, 185, 185)
+  color: var(--second-color);
 }
 
 .text-n{
@@ -74,22 +75,79 @@
   
 }
 
-.navbar {
-  display:flex;
-  position: absolute;
+.menu-phone-div{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  height: 50px;
+  backdrop-filter:blur(2px);
+  border-radius: 10px;
+  position: fixed;
   align-items: center;
-  width: 100%;
-  min-height: fit-content;
-  color: #6dcdb8;
-  padding:2rem 0 0 0;
+  z-index: 100;
 }
+
+.menu-phone-div-hidden{
+  display: none;
+  justify-content: space-between;
+  width: 85%;
+  height: 50px;
+  opacity: .6;
+  border-radius: 20px;
+  position: fixed;
+  align-items: center;
+  z-index: 100;
+}
+
+
+.navbar {
+  display:absolute;
+  position: fixed;
+  align-items: center;
+  left: 0;
+  height: 100vh;
+  padding:2rem 0 0 0;
+  z-index: 100;
+  padding: 1.2rem;
+  background-color: black;
+}
+
+.navbar-hidden{
+  display:none;
+  position: fixed;
+  align-items: center;
+  height: 100vh;
+  left: 0;
+  padding:2rem 0 0 0;
+  z-index: 100;
+  padding: 1.2rem;
+  background-color: rgb(43, 30, 30);
+  transition: all 1s ease-in-out;
+}
+
+.navbar-top-items{
+  display: flex;
+  flex-direction: row;;
+  justify-content: space-between;
+}
+
+
+.div-menu-icon{
+  display: flex;
+}
+
+.menu-icon{
+  font-size: 2rem;
+  color: white
+}
+
 
 .logo-div{
   display: flex;
   width: 30%
 }
 .name{
-    background: -webkit-linear-gradient(45deg,#43ace1,#6dcdb8);
+    background: -webkit-linear-gradient(45deg,#ff1b6b,#45caff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: tomato;
@@ -98,37 +156,33 @@
 }
 
 .list-div{
-  display: none;
-  justify-content: flex-end;
-  width: 70%
-}
-
-/* menu hamburguesa */
-.burger-menu{
- display: none;
- list-style-type: none;
- height: 100vh;
- width: 30%;
- background-color: var(--primary-color);
-
+  display: flex;
+  flex-direction: column;
+  color:white;
+  margin-top: 1rem;
+  
 }
 
 .list-menu li{
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
   list-style: none;
   padding: .5rem;
-  text-align: center;
+  text-align: left;
   
 }
 
 li {
   padding: 2rem;
+ 
 }
 
 li:hover {
   border-bottom: 2px solid var(--primary-color);
   cursor: pointer;
-  transition: all .5s ease-in;
+
+  
 }
 
 .resume {
@@ -142,16 +196,18 @@ li:hover {
 }
 
 
+
 /* Estilos para nuestros componente de spring */
 .div-numbers{
   display: flex;
   flex-direction: row;
+  
 }
 
 .number{
   display: flex;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: var(--primary-color)
 }
 
@@ -161,8 +217,8 @@ li:hover {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top:8rem;
-  line-height: 6rem;
+  padding-top:3rem;
+  line-height: 4rem;
 }
 
 .name-div{
@@ -174,12 +230,19 @@ li:hover {
   overflow-y: hidden;
 }
 
+.hello-div{
+  position: absolute;
+  top: 0;
+}
+
 .hello{
   margin: 0;
   padding: 0;
-  line-height: 0;
-  font-size: 10rem;
-  opacity: .3
+  line-height: 12rem;
+  word-wrap:break-word;
+  font-size: 7rem;
+  opacity: .4;
+  text-align: left;
 }
 
 .social-div{
@@ -204,7 +267,7 @@ li:hover {
 
 .stats{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   word-break: keep-all;
   line-height: 1.5rem;
@@ -215,7 +278,7 @@ li:hover {
 
 .btn-div{
   align-items: center;
-  display: flex;
+  display: none;
   justify-content: left;
   width: 20%;
 }
@@ -223,7 +286,13 @@ li:hover {
 .btn-toogle{
   font-size: 2.2rem;
   color: #6dcdb8;
-  transform: rotate(0deg);
+  transform: rotate(90deg);
+}
+
+.letter-div{
+  font-size: .6rem;
+  padding: .2rem;
+  margin-right: .2rem;
 }
 
 /* section photo */
@@ -549,8 +618,6 @@ li:hover {
 
 /* Tercera seccion de los proyectos */
 
-
-
 .gallery-div{
   display: grid;
   gap: 1rem;
@@ -790,4 +857,115 @@ li:hover {
 .item6{
   grid-column-start: 5;
 }
+
+
+
+.navbar {
+  display:flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  padding:2rem 0 0 0;
+}
+
+.navbar-top-items{
+  display: flex;
+  flex-direction: column;;
+  justify-content: space-between;
+}
+
+.list-div{
+  display: flex;
+  flex-direction: row;
+  color: black;
+  margin-top: 1rem;
+  
+}
+
+.list-menu li{
+  display: inline;
+  margin-top: 1rem;
+  list-style: none;
+  padding: .5rem;
+  text-align: left;
+  
+}
+
+li {
+  padding: 2rem;
+  color: white
+}
+
+li:hover {
+ 
+  cursor: pointer;
+}
+
+
+
+
+.hello-div{
+  position: absolute;
+  top: 3%;
+}
+
+.hello{
+  margin: 0;
+  padding: 0;
+  line-height: 12rem;
+  word-wrap:break-word;
+  font-size: 8rem;
+  opacity: .4;
+  text-align: left;
+}
+
+.name{
+  background: -webkit-linear-gradient(45deg,#43ace1,#6dcdb8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: tomato;
+  font-size: 2rem
+}
+
+
+.letter-div{
+  font-size: 1.3rem;
+}
+
+.number{
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--primary-color)
+}
+
+.resume {
+
+}
+
+.resume:hover{
+
+}
+
+
+.div-menu-icon{
+  display: none;
+}
+
+.logo-div{
+  display: flex;
+  width: 100%
+}
+
+
+.btn-div{
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  width: 20%;
+}
+
 }
